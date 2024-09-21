@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Scrapper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="search-container">
+      <div class="search-box">
+        <h1 class="search-title">Job Scrapper</h1>
+        <p class="search-description">What do you wanna search?</p>
+        <form action="/search" class="search-form">
+          <input type="text" name="keyword" placeholder="Write the keyword that you wanna search." required />
+          <button type="submit">Search</button>
+        </form>
+        <header># Input things like languages you usually use.</header>
+      </div>
+    </main>
+  </body>
+</html>

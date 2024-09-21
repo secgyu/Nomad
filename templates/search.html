@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results for "{{ keyword }}"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="result-container">
+      <h1 class="result-title">Search Results for "{{ keyword }}"</h1>
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for job in jobs %}
+          <tr>
+            <td>{{ job.position }}</td>
+            <td>{{ job.company or "Not specified" }}</td>
+            <td>{{ job.location or "Not specified" }}</td>
+            <td><a href="{{ job.link }}" target="_blank" class="apply-link">Visit</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

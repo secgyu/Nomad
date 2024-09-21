@@ -1,0 +1,190 @@
+/* 전체 페이지 배경 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 검색 컨테이너 (home.html 부분) */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.search-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 500px;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 상자에 약간의 입체감 추가 */
+.search-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 타이틀 스타일 */
+.search-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+/* 설명 텍스트 */
+.search-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* 검색 폼 스타일 */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  padding: 15px;
+  width: 70%;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 입력창에 포커스 시 효과 */
+.search-form input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 버튼 스타일 */
+.search-form button {
+  padding: 15px 30px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 버튼 호버 효과 */
+.search-form button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 테이블 스타일 (search.html 부분) */
+.result-container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.result-table th,
+.result-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.result-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+}
+
+.result-table td {
+  font-size: 1rem;
+}
+
+.result-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.apply-link {
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-link:hover {
+  background-color: #357abd;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .search-box {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .search-description {
+    font-size: 1rem;
+  }
+
+  .search-form input[type="text"] {
+    width: 100%;
+  }
+
+  .search-form button {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .result-table th,
+  .result-table td {
+    font-size: 0.9rem;
+  }
+}
