@@ -9,3 +9,6 @@
 
 ## 📷챌린지 수료 스크린샷 
 ![Python Flask](https://github.com/secgyu/Nomad/blob/main/Nomad.png)
+
+## 📷 미리보기
+![Python Flask](https://github.com/secgyu/Nomad/blob/main/job.png)
